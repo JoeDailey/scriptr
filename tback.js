@@ -20,6 +20,6 @@ scriptr.listen(7000);
 //RoutingStart///////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------/////-landing page
 scriptr.get('/', function (req, res){
-	var func = '$(document).ready(function(){setInterval(function(){$("body").css("background", "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")")}, 20);});'
+	var func = '$(document).ready(function(){setInterval(function(){$("body").css("background", "rgb("+(Math.random()*255)+","+(Math.random()*255)+","+(Math.random()*255)+")");}, 20);})'
 	res.send(200, {script:func});
  });	
